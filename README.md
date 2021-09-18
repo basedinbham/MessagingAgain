@@ -1,7 +1,7 @@
 # MessagingAgain
 Must install follwing pods:
-  GoogleSignIn
-  Firebase/Core
+  /n GoogleSignIn
+  /n Firebase/Core
   Firebase/Auth
   MessageKit
   Firebase/Firestore
