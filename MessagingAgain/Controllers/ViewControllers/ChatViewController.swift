@@ -49,6 +49,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        
     }
     
     // Create new chat if there is no chat available between users
@@ -79,6 +80,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                         let chat = Chat(dictionary: doc.data())
                         
                         // Get the chat for user2
+                        // KWARR
                         if (chat?.users.contains(self.user2UID ?? "ID Not Found")) == true {
                             self.docReference = doc.reference
                             
@@ -114,6 +116,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         }
     }
     func createNewChat() {
+        //KWARR
         let users = [self.currentUser.uid, self.user2UID]
         let data: [String: Any] = [
             "users": users
@@ -200,7 +203,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         }
     }
     
-     //Default avatar size.  This method handles size of user avatar displayed alongside message
+    //Default avatar size.  This method handles size of user avatar displayed alongside message
     func avatarSize(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGSize {
         return .zero
     }
@@ -212,15 +215,15 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     }
     
     // Display avatar
-//    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-//        // If current user, show their photo
-//        if message.sender.senderId == currentUser.uid {
-//
-//            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl!), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
-//                avatarView.image = image
-//            }
-//        }
-//    }
+    //    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+    //        // If current user, show their photo
+    //        if message.sender.senderId == currentUser.uid {
+    //
+    //            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl!), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+    //                avatarView.image = image
+    //            }
+    //        }
+    //    }
     
     //  Bubble style: tail
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {

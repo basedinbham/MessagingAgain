@@ -12,7 +12,14 @@ import Firebase
 
 class ViewController: UIViewController {
     
+    //MARK: - OUTLETS
     @IBOutlet weak var googleSignIn: GIDSignInButton!
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    //MARK: - PROPERTIES
+    var userName: String?
+    
+    //MARK: - LIFECYCLES
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +58,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-
-
-    
-    
-    
     
 } // End of Class
 

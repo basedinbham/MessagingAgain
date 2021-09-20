@@ -32,6 +32,19 @@
                                     <segue destination="Qy0-AV-KSC" kind="show" id="4xa-41-1iw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od3-uM-few" userLabel="Name:">
+                                <rect key="frame" x="100" y="560" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="enter name here..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wr-T7-Gre">
+                                <rect key="frame" x="184" y="553" width="145" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,6 +52,7 @@
                     <navigationItem key="navigationItem" id="2Mf-8v-g2o"/>
                     <connections>
                         <outlet property="googleSignIn" destination="tg0-Qy-Hbb" id="XAK-zr-1dr"/>
+                        <outlet property="nameTextField" destination="2wr-T7-Gre" id="hEL-Ze-UZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,11 +69,13 @@
                         <viewLayoutGuide key="safeArea" id="bkM-8C-sfO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mbF-yb-bDs"/>
+                    <navigationItem key="navigationItem" id="mbF-yb-bDs">
+                        <barButtonItem key="rightBarButtonItem" image="person.2" catalog="system" id="Xef-Lp-Ikc"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsK-xl-FDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="88"/>
+            <point key="canvasLocation" x="1595.6521739130435" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ox-x3-Byl">
@@ -81,6 +97,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.2" catalog="system" width="128" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
