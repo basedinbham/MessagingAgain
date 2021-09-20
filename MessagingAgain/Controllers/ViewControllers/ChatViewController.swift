@@ -18,6 +18,8 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     var currentUser: User = Auth.auth().currentUser!
     private var docReference: DocumentReference?
     var messages: [Message] = []
+    private var messageListener: ListenerRegistration?
+    private let database = Firestore.firestore()
     
     // Will send profile of second user from previous class that is navigating to chat view.
     
